@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>NUR ISLAM — DARKI | Curriculum Vitae</title>
+
+<style>
+
+/* =========================================================
+   PRINT SETTINGS
+   ========================================================= */
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #d9d9d9;
+    color: #111;
+    font-family:
+        "Inter",
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+
+/* =========================================================
+   A4 PAGE
+   ========================================================= */
+
+.page {
+    width: 210mm;
+    min-height: 297mm;
+
+    margin: 20px auto;
+
+    padding:
+        12mm
+        14mm
+        13mm
+        14mm;
+
+    background: white;
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.15);
+}
+
+
+/* =========================================================
+   DECORATION
+   ========================================================= */
+
+.top-bar {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background: #111;
+}
+
+.circle {
+    position: absolute;
+
+    width: 125px;
+    height: 125px;
+
+    right: -62px;
+    top: -62px;
+
+    border:
+        18px solid #eeeeee;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 25px;
+
+    padding-bottom: 14px;
+
+    border-bottom:
+        2px solid #111;
+}
+
+.name {
+    font-size: 42px;
+
+    line-height: .9;
+
+    font-weight: 900;
+
+    letter-spacing: -2.7px;
+}
+
+.darki {
+    margin-top: 7px;
+
+    font-size: 14px;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+}
+
+.title {
+    margin-top: 7px;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.6px;
+
+    color: #666;
+}
+
+.contact {
+    text-align: right;
+
+    font-size: 8.3px;
+
+    line-height: 1.7;
+
+    color: #333;
+}
+
+.contact a {
+    color: #333;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+.profile {
+    margin-top: 13px;
+
+    margin-bottom: 16px;
+
+    padding:
+        10px
+        12px;
+
+    border-left:
+        4px solid #111;
+
+    background: #f5f5f5;
+
+    font-size: 9.2px;
+
+    line-height: 1.6;
+}
+
+.profile strong {
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   TWO COLUMN LAYOUT
+   IMPORTANT:
+   FLEX IS USED INSTEAD OF CSS GRID
+   FOR BETTER PDF PAGINATION
+   ========================================================= */
+
+.columns {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 22px;
+
+    width: 100%;
+}
+
+.sidebar {
+    width: 34%;
+
+    flex: 0 0 34%;
+
+    padding-right: 17px;
+
+    border-right:
+        1px solid #d0d0d0;
+}
+
+.main-content {
+    width: 66%;
+
+    flex: 1 1 66%;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.section {
+    margin-bottom: 17px;
+
+    break-inside: avoid;
+
+    page-break-inside: avoid;
+}
+
+.section-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 8px;
+
+    font-size: 8.5px;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.8px;
+}
+
+.section-title::before {
+    content: "";
+
+    width: 17px;
+
+    height: 3px;
+
+    background: #111;
+
+    display: block;
+}
+
+
+/* =========================================================
+   EDUCATION
+   ========================================================= */
+
+.education-title {
+    font-size: 11.5px;
+
+    font-weight: 900;
+
+    line-height: 1.3;
+}
+
+.education-university {
+    margin-top: 3px;
+
+    font-size: 9px;
+
+    font-weight: 750;
+}
+
+.education-info {
+    margin-top: 4px;
+
+    font-size: 8px;
+
+    line-height: 1.55;
+
+    color: #666;
+}
+
+.badge {
+    display: inline-block;
+
+    margin-top: 7px;
+
+    padding:
+        4px
+        6px;
+
+    background: #111;
+
+    color: white;
+
+    font-size: 6.7px;
+
+    font-weight: 900;
+
+    letter-spacing: .7px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   SKILLS
+   ========================================================= */
+
+.skill {
+    margin-bottom: 8px;
+}
+
+.skill-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: baseline;
+
+    margin-bottom: 3px;
+
+    font-size: 8px;
+
+    font-weight: 800;
+}
+
+.skill-level {
+    font-size: 6.5px;
+
+    color: #777;
+
+    letter-spacing: .4px;
+}
+
+.skill-bar {
+    height: 3px;
+
+    width: 100%;
+
+    background: #dedede;
+}
+
+.skill-fill {
+    height: 100%;
+
+    display: block;
+
+    background: #111;
+}
+
+
+/* =========================================================
+   TAGS
+   ========================================================= */
+
+.tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 4px;
+}
+
+.tag {
+    display: inline-block;
+
+    padding:
+        4px
+        6px;
+
+    border:
+        1px solid #c9c9c9;
+
+    background: white;
+
+    font-size: 7px;
+
+    line-height: 1;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   SOCIAL LINKS
+   ========================================================= */
+
+.social {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 6px;
+
+    font-size: 8px;
+}
+
+.social-icon {
+    width: 18px;
+
+    height: 18px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 3px;
+
+    background: #111;
+
+    color: white;
+
+    font-size: 6.5px;
+
+    font-weight: 900;
+}
+
+.social a {
+    color: #222;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   EXPERIENCE
+   ========================================================= */
+
+.experience {
+    margin-bottom: 14px;
+
+    break-inside: avoid;
+
+    page-break-inside: avoid;
+}
+
+.experience-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: baseline;
+
+    gap: 10px;
+}
+
+.experience-title {
+    font-size: 11.5px;
+
+    font-weight: 900;
+}
+
+.experience-date {
+    font-size: 7px;
+
+    color: #777;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+.experience-company {
+    margin-top: 2px;
+
+    font-size: 8px;
+
+    color: #666;
+
+    font-weight: 750;
+}
+
+.experience p {
+    margin:
+        5px
+        0
+        0;
+
+    font-size: 8.3px;
+
+    line-height: 1.55;
+
+    color: #333;
+}
+
+.experience ul {
+    margin:
+        5px
+        0
+        0;
+
+    padding-left: 14px;
+}
+
+.experience li {
+    margin-bottom: 3px;
+
+    font-size: 8px;
+
+    line-height: 1.45;
+
+    color: #333;
+}
+
+
+/* =========================================================
+   PROJECTS
+   ========================================================= */
+
+.project {
+    margin-bottom: 12px;
+
+    padding-bottom: 10px;
+
+    border-bottom:
+        1px solid #e0e0e0;
+
+    break-inside: avoid;
+
+    page-break-inside: avoid;
+}
+
+.project:last-child {
+    border-bottom: none;
+}
+
+.project-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: baseline;
+
+    gap: 10px;
+}
+
+.project-name {
+    font-size: 11.5px;
+
+    font-weight: 900;
+}
+
+.project-type {
+    font-size: 6.5px;
+
+    font-weight: 900;
+
+    color: #888;
+
+    text-transform: uppercase;
+
+    letter-spacing: .9px;
+
+    white-space: nowrap;
+}
+
+.project p {
+    margin:
+        5px
+        0
+        0;
+
+    font-size: 8.3px;
+
+    line-height: 1.55;
+
+    color: #333;
+}
+
+.project-tech {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 4px;
+
+    margin-top: 5px;
+}
+
+.project-tech span {
+    padding:
+        3px
+        5px;
+
+    background: #eeeeee;
+
+    font-size: 6.3px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   DEVELOPMENT PROFILE
+   ========================================================= */
+
+.dev-grid {
+    display: flex;
+
+    gap: 20px;
+}
+
+.dev-column {
+    width: 50%;
+}
+
+.dev-title {
+    margin-bottom: 5px;
+
+    font-size: 7.5px;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.dev-list {
+    margin: 0;
+
+    padding-left: 13px;
+}
+
+.dev-list li {
+    margin-bottom: 3px;
+
+    font-size: 7.7px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   CAREER GOAL
+   ========================================================= */
+
+.goal {
+    padding:
+        10px
+        11px;
+
+    background: #111;
+
+    color: white;
+
+    break-inside: avoid;
+
+    page-break-inside: avoid;
+}
+
+.goal-title {
+    margin-bottom: 5px;
+
+    font-size: 7.5px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+}
+
+.goal p {
+    margin: 0;
+
+    font-size: 8px;
+
+    line-height: 1.55;
+
+    color: #eeeeee;
+}
+
+
+/* =========================================================
+   PAGE 2
+   ========================================================= */
+
+.page-two {
+    padding-top: 13mm;
+}
+
+
+/* =========================================================
+   PAGE 2 HEADER
+   ========================================================= */
+
+.continue-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    margin-bottom: 15px;
+
+    padding-bottom: 10px;
+
+    border-bottom:
+        2px solid #111;
+}
+
+.continue-title {
+    font-size: 19px;
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+}
+
+.continue-sub {
+    font-size: 7px;
+
+    color: #777;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   PROJECT FEATURE
+   ========================================================= */
+
+.feature {
+    padding:
+        11px
+        12px;
+
+    margin-bottom: 13px;
+
+    background: #f5f5f5;
+
+    border-left:
+        4px solid #111;
+
+    break-inside: avoid;
+
+    page-break-inside: avoid;
+}
+
+.feature-title {
+    font-size: 13px;
+
+    font-weight: 900;
+}
+
+.feature-sub {
+    margin-top: 2px;
+
+    font-size: 7.5px;
+
+    color: #777;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    font-weight: 800;
+}
+
+.feature p {
+    margin:
+        6px
+        0
+        0;
+
+    font-size: 8.5px;
+
+    line-height: 1.6;
+
+    color: #333;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    position: absolute;
+
+    left: 14mm;
+
+    right: 14mm;
+
+    bottom: 7mm;
+
+    padding-top: 6px;
+
+    border-top:
+        1px solid #cccccc;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 6.5px;
+
+    color: #888;
+
+    letter-spacing: .7px;
+}
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+    html,
+    body {
+        background: white;
+    }
+
+    .page {
+        margin: 0;
+
+        box-shadow: none;
+
+        page-break-after: always;
+    }
+
+    .page:last-child {
+        page-break-after: auto;
+    }
+
+    .columns {
+        display: flex;
+    }
+
+}
+
+
+/* =========================================================
+   SCREEN
+   ========================================================= */
+
+@media screen {
+
+    .page {
+        margin-bottom: 25px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     PAGE 1
+     ========================================================= -->
+
+<div class="page">
+
+    <div class="top-bar"></div>
+
+    <div class="circle"></div>
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div>
+
+            <div class="name">
+                NUR ISLAM
+            </div>
+
+            <div class="darki">
+                DARKI
+            </div>
+
+            <div class="title">
+                Student · Video Editor · Graphic Designer · Developer
+            </div>
+
+        </div>
+
+
+        <div class="contact">
+
+            <div>
+                <a href="mailto:nurislam76898@gmail.com">
+                    nurislam76898@gmail.com
+                </a>
+            </div>
+
+            <div>
+                <a href="tel:+919674015783">
+                    +91 9674015783
+                </a>
+            </div>
+
+            <div>
+                Kolkata, West Bengal, India
+            </div>
+
+            <div>
+                Hometown: Bharatpur, Murshidabad
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- PROFILE -->
+
+    <div class="profile">
+
+        <strong>PROFILE — </strong>
+
+        Creative and technically curious undergraduate student pursuing
+        a B.A. in English while developing practical experience across
+        video editing, graphic design, web development, Android/Linux
+        environments and independent software projects. Works as a
+        freelance video editor on paid client projects and enjoys
+        combining creative production with technology. Currently
+        expanding software-development skills through hands-on
+        projects and AI-assisted coding workflows.
+
+    </div>
+
+
+    <!-- COLUMNS -->
+
+    <div class="columns">
+
+
+        <!-- =====================================================
+             SIDEBAR
+             ===================================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- EDUCATION -->
+
+            <section class="section">
+
+                <div class="section-title">
+                    Education
+                </div>
+
+                <div class="education-title">
+                    B.A. in English
+                </div>
+
+                <div class="education-university">
+                    Aliah University, Kolkata
+                </div>
+
+                <div class="education-info">
+
+                    4-Year Undergraduate Programme<br>
+
+                    Currently: 2nd Year · Semester 3<br>
+
+                    Started: 2025<br>
+
+                    Expected Graduation: 2029
+
+                </div>
+
+                <div class="badge">
+                    Undergraduate Student
+                </div>
+
+            </section>
+
+
+            <!-- CREATIVE SKILLS -->
+
+            <section class="section">
+
+                <div class="section-title">
+                    Creative Skills
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-header">
+
+                        <span>
+                            Video Editing
+                        </span>
+
+                        <span class="skill-level">
+                            ADVANCED
+                        </span>
+
+                    </div>
+
+                    <div class="skill-bar">
+                        <span
+                            class="skill-fill"
+                            style="width:88%">
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-header">
+
+                        <span>
+                            Graphic Design
+                        </span>
+
+                        <span class="skill-level">
+                            ADVANCED
+                        </span>
+
+                    </div>
+
+                    <div class="skill-bar">
+                        <span
+                            class="skill-fill"
+                            style="width:84%">
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-header">
+
+                        <span>
+                            Visual Communication
+                        </span>
+
+                        <span class="skill-level">
+                            STRONG
+                        </span>
+
+                    </div>
+
+                    <div class="skill-bar">
+                        <span
+                            class="skill-fill"
+                            style="width:82%">
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <div class="skill-header">
+
+                        <span>
+                            Creative Direction
+                        </span>
+
+                        <span class="skill-level">
+                            STRONG
+                        </span>
+
+                    </div>
+
+                    <div class="skill-bar">
+                        <span
+                            class="skill-fill"
+                            style="width:78%">
+                        </span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- CREATIVE SOFTWARE -->
+
+            <section class="section">
+
+                <div class="section-title">
+                    Creative Software
+                </div>
+
+                <div class="tags">
+
+                    <span class="tag">
+                        CapCut
+                    </span>
+
+                    <span class="tag">
+                        Alight Motion
+                    </span>
+
+                    <span class="tag">
+                        Canva
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- TECHNICAL -->
+
+            <section class="section">
+
+                <div class="section-title">
+                    Technical
+                </div>
+
+                <div class="tags">
+
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Git</span>
+                    <span class="tag">GitHub</span>
+                    <span class="tag">Firebase</span>
+                    <span class="tag">MongoDB</span>
+                    <span class="tag">SQLite</span>
+                    <span class="tag">Android Studio</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">Kotlin</span>
+                    <span class="tag">Linux</span>
+                    <span class="tag">Termux</span>
+                    <span class="tag">Bash</span>
+                    <span class="tag">Cloudflare</span>
+                    <span class="tag">Render</span>
+                    <span class="tag">Google Cloud</span>
+
+                </div>
+
+            </section>
+
+
+            <!-- SOCIAL -->
+
+            <section class="section">
+
+                <div class="section-title">
+                    Connect
+                </div>
+
+
+                <div class="social">
+
+                    <div class="social-icon">
+                        GH
+                    </div>
+
+                    <a
+                        href="https://github.com/nur12islam"
+                        target="_blank">
+
+                        github.com/nur12islam
+
+                    </a>
+
+                </div>
+
+
+                <div class="social">
+
+                    <div class="social-icon">
+                        IG
+                    </div>
+
+                    <a
+                        href="https://instagram.com/darki0047"
+                        target="_blank">
+
+                        @darki0047
+
+                    </a>
+
+                </div>
+
+
+                <div class="social">
+
+                    <div class="social-icon">
+                        TG
+                    </div>
+
+                    <a
+                      
